@@ -79,6 +79,12 @@
         <item>60</item>
     </integer-array>
 
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <integer-array name="config_availableColorModes">
+        <item>260</item>
+        <item>0</item>
+    </integer-array>
+
     <!-- Messages that should not be shown to the user during face authentication, on keyguard.
          This includes both lockscreen and bouncer. This should be used to hide messages that may be
          too chatty or messages that the user can't do much about. Entries are defined in
