@@ -902,7 +902,6 @@ vendor/lib64/vendor.hardware.light-V1-ndk_platform.so
 
 # eUICC
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
-system/app/GoogleEuiccPartner/GoogleEuiccPartner.apk
 
 # GPS
 vendor/bin/edgnss-daemon

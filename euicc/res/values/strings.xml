@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="sim_slot_mappings_json">{ sim-slot-mappings:[ { devices:[Asteroids], esim-slot-ids:[1], psim-slot-ids:[0] }, { devices:[Spacewar,Pong,Pacman,Tetris,PacmanPro], esim-slot-ids:[], psim-slot-ids:[0,1] } ] }</string>
+</resources>
