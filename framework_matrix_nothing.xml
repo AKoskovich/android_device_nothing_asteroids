@@ -1,0 +1,38 @@
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="2.0" type="framework">
+    <!-- Biometrics -->
+    <hal format="aidl">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Camera -->
+    <hal format="aidl">
+        <name>vendor.noth.hardware.camera</name>
+        <interface>
+            <name>INtCamService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Charging -->
+    <hal format="aidl">
+        <name>vendor.noth.hardware.charge</name>
+        <interface>
+            <name>ICharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Sensors -->
+    <hal format="aidl">
+        <name>vendor.noth.hardware.sensor.sensor_extension</name>
+        <interface>
+            <name>ISensorExtension</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
