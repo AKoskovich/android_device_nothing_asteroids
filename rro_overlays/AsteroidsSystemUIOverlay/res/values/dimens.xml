@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="keyguard_indication_margin_bottom">350px</dimen>
+
+    <!-- Location on the screen of the center of the physical power button. This is a reasonable
+    default that should be overridden by device-specific overlays. -->
+    <dimen name="physical_power_button_center_screen_location_y">1030px</dimen>
+
+    <!-- The padding on the top of the statusbar (usually 0). -->
+    <dimen name="status_bar_padding_top">20px</dimen>
+
+    <!-- The padding on the start of the status bar. -->
+    <dimen name="status_bar_padding_start">35px</dimen>
+
+    <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
+         relies on this value will not be sized correctly. -->
+    <item name="pixel_pitch" format="float" type="dimen">62.91</item>
+</resources>

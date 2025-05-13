@@ -1,0 +1,13 @@
+#
+# SPDX-FileCopyrightText: 2025 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# eSE
+/dev/st54spi    0660    secure_element    secure_element
+
+# Fingerprint
+/dev/goodix_fp    0660    system    system
+
+# Lights
+/dev/led_strips   0664   system   system

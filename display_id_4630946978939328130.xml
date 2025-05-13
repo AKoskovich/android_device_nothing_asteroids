@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<displayConfiguration>
+    <screenBrightnessMap>
+        <point>
+            <value>0.0000</value>
+            <nits>7.0</nits>
+        </point>
+        <point>
+            <value>0.13459</value>
+            <nits>14.0</nits>
+        </point>
+        <point>
+            <value>0.20469</value>
+            <nits>34.0</nits>
+        </point>
+        <point>
+            <value>0.28994</value>
+            <nits>70.0</nits>
+        </point>
+        <point>
+            <value>0.31534</value>
+            <nits>84.0</nits>
+        </point>
+        <point>
+            <value>0.32706</value>
+            <nits>90.0</nits>
+        </point>
+        <point>
+            <value>0.36395</value>
+            <nits>111.0</nits>
+        </point>
+        <point>
+            <value>0.39595</value>
+            <nits>132.0</nits>
+        </point>
+        <point>
+            <value>0.41353</value>
+            <nits>145.0</nits>
+        </point>
+        <point>
+            <value>0.45579</value>
+            <nits>178.0</nits>
+        </point>
+        <point>
+            <value>0.49072</value>
+            <nits>211.0</nits>
+        </point>
+        <point>
+            <value>0.52614</value>
+            <nits>248.0</nits>
+        </point>
+        <point>
+            <value>0.58476</value>
+            <nits>318.0</nits>
+        </point>
+        <point>
+            <value>0.60503</value>
+            <nits>344.0</nits>
+        </point>
+        <point>
+            <value>0.71959</value>
+            <nits>500.0</nits>
+        </point>
+        <point>
+            <value>0.84074</value>
+            <nits>700.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>1174.0</nits>
+        </point>
+    </screenBrightnessMap>
+
+    <highBrightnessMode enabled="true">
+        <!-- Brightness level at which we transition from normal to high-brightness. -->
+        <transitionPoint>0.84074</transitionPoint>
+        <!-- Minimum lux needed to enter high brightness mode. -->
+        <minimumLux>7000</minimumLux>
+        <timing>
+            <!-- Window in which we restrict HBM. -->
+            <timeWindowSecs>1800</timeWindowSecs>
+            <!-- Maximum time of HBM allowed in that window. -->
+            <timeMaxSecs>300</timeMaxSecs>
+            <!-- Minimum time remaining required to switch HBM on for. -->
+            <timeMinSecs>60</timeMinSecs>
+        </timing>
+        <!-- Whether HBM is allowed when lower power mode is active. -->
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+        <!-- Minimum HDR video size to enter high brightness mode. -->
+        <minimumHdrPercentOfScreen>0.2</minimumHdrPercentOfScreen>
+        <!-- This LUT specifies how to boost HDR brightness at given SDR brightness (nits). -->
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>2.0</sdrNits>
+                <hdrRatio>8.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>10.0</sdrNits>
+                <hdrRatio>8.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>50.0</sdrNits>
+                <hdrRatio>7.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>100.0</sdrNits>
+                <hdrRatio>6.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>200.0</sdrNits>
+                <hdrRatio>4.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>300.0</sdrNits>
+                <hdrRatio>3.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>400.0</sdrNits>
+                <hdrRatio>2.5</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>500.0</sdrNits>
+                <hdrRatio>2.2</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>700.0</sdrNits>
+                <hdrRatio>1.7</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
+    </highBrightnessMode>
+</displayConfiguration>

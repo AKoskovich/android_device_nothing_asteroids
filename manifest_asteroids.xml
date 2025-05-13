@@ -1,0 +1,12 @@
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <hal format="aidl" override="true">
+        <name>android.hardware.secure_element</name>
+        <version>1</version>
+        <fqname>ISecureElement/SIM1</fqname>
+        <fqname>ISecureElement/SIM2</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_ambientThresholdLevels. The brightening threshold is calculated as
+         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
+         description for how the constraint value is chosen. -->
+    <integer-array name="config_ambientBrighteningThresholds">
+        <item>10000</item>
+        <item>5000</item>
+        <item>4333</item>
+        <item>3666</item>
+        <item>3000</item>
+        <item>2760</item>
+        <item>2520</item>
+        <item>2280</item>
+        <item>2040</item>
+        <item>1800</item>
+        <item>800</item>
+        <item>527</item>
+        <item>500</item>
+        <item>400</item>
+        <item>248</item>
+        <item>100</item>
+    </integer-array>
+
+    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
+         percent. The length of this array is assumed to be one greater than
+         config_ambientThresholdLevels. The darkening threshold is calculated as
+         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
+         the screen brightness is recalculated. See the config_ambientThresholdLevels
+         description for how the constraint value is chosen. -->
+    <integer-array name="config_ambientDarkeningThresholds">
+        <item>853</item>
+        <item>700</item>
+        <item>683</item>
+        <item>666</item>
+        <item>650</item>
+        <item>640</item>
+        <item>630</item>
+        <item>620</item>
+        <item>610</item>
+        <item>600</item>
+        <item>500</item>
+        <item>500</item>
+        <item>440</item>
+        <item>385</item>
+        <item>311</item>
+        <item>200</item>
+    </integer-array>
+
+    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
+         values by calculating the index to use for lookup and then setting the constraint value
+         to the corresponding value of the array. The new brightening hysteresis constraint value
+         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
+         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
+
+         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
+         condition                       calculated index
+         value < level[0]                0
+         level[n] <= value < level[n+1]  n+1
+         level[MAX] <= value             MAX+1 -->
+    <integer-array name="config_ambientThresholdLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+    </integer-array>
+
+    <!-- Messages that should not be shown to the user during face authentication, on keyguard.
+         This includes both lockscreen and bouncer. This should be used to hide messages that may be
+         too chatty or messages that the user can't do much about. Entries are defined in
+         android.hardware.biometrics.face@1.0 types.hal -->
+    <integer-array name="config_face_acquire_keyguard_ignorelist">
+        <item>11</item>
+    </integer-array>
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/vendor/lib64/camera/components/com.qti.stats.aecxcore.so"</item>
+        <item>"/vendor/lib64/camera/components/com.qti.stats.afc.so"</item>
+        <item>"/vendor/lib64/camera/components/com.qti.stats.hafoverride.so"</item>
+        <item>"/vendor/lib64/camera/components/com.qti.stats.pdlib.so"</item>
+        <item>"/vendor/lib64/com.qti.feature2.hdr.so"</item>
+        <item>"/vendor/lib64/com.qti.feature2.rawhdr.so"</item>
+        <item>"/vendor/lib64/libarcsoft_tfe_hdr.so"</item>
+        <item>"/vendor/lib64/libarcsoft_tfe_hdr_front.so"</item>
+        <item>"/vendor/lib64/libcamxtintlessalgo.so"</item>
+        <item>"/vendor/lib64/libipebpsstriping.so"</item>
+        <item>"/vendor/lib64/libjpege.so"</item>
+        <item>"/vendor/lib64/libllvm-qcom.so"</item>
+        <item>"/vendor/lib64/libtfestriping.so"</item>
+        <item>"/vendor/lib64/libvega_common.so"</item>
+        <item>"/vendor/lib64/libwa_sat.so"</item>
+    </string-array>
+
+    <!-- An array of device capabilities defined by GSMA SGP.22 v2.0.
+         The first item is the capability name that the device supports. The second item is the
+         major version. The minor and revision versions are default to 0s.
+         The device capabilities and their definition in the spec are:
+             gsm : gsmSupportedRelease
+             utran : utranSupportedRelease
+             cdma1x : cdma2000onexSupportedRelease
+             hrpd : cdma2000hrpdSupportedRelease
+             ehrpd : cdma2000ehrpdSupportedRelease
+             eutran : eutranSupportedRelease
+             nfc : contactlessSupportedRelease
+             crl : rspCrlSupportedVersion
+             nrepc : nrEpcSupportedRelease
+             nr5gc : nr5gcSupportedRelease
+             eutran5gc : eutran5gcSupportedRelease
+    -->
+    <string-array translatable="false" name="config_telephonyEuiccDeviceCapabilities">
+        <item>gsm,9</item>
+        <item>utran,9</item>
+        <item>eutran,16</item>
+    </string-array>
+
+    <!-- When each intermediate UDFPS enroll stage ends, as a fraction of total progress. -->
+    <string-array translatable="false" name="config_udfps_enroll_stage_thresholds">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.55</item>
+    </string-array>
+
+    <!-- Boolean indicating whether display white balance is supported. -->
+    <bool name="config_displayWhiteBalanceAvailable">true</bool>
+
+    <!-- Boolean indicating whether display white balance should be enabled by default. -->
+    <bool name="config_displayWhiteBalanceEnabledDefault">true</bool>
+
+    <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
+    <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Whether the display cutout region of the main built-in display should be forced to
+         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+         -->
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.05</item>
+
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.05</item>
+
+    <!-- Default screen brightness setting set.
+         -2 is invalid so setting will resort to int value specified above.
+         Must be in the range specified by minimum and maximum. -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 1.0 for maximum brightness range.
+         The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+
+    <!-- Minimum screen brightness setting allowed by power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 0.0 to allow screen to go to minimal brightness.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
+         for debouncing the light sensor.  Different constants are used to debounce the light sensor
+         when adapting to brighter or darker environments.  This parameter controls how quickly
+         brightness changes occur in response to an observed change in light level that exceeds the
+         hysteresis threshold. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+
+    <!-- Timeout (in milliseconds) after which we remove the effects any user interactions might've
+         had on the brightness mapping. This timeout doesn't start until we transition to a
+         non-interactive display policy so that we don't reset while users are using their devices,
+         but also so that we don't erroneously keep the short-term model if the device is dozing
+         but the display is fully on. -->
+    <integer name="config_autoBrightnessShortTermModelTimeout">120000</integer>
+
+    <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Default color temperature, in Kelvin, used by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureDefault">6500</integer>
+
+    <!-- Maximum color temperature, in Kelvin, supported by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureMax">6800</integer>
+
+    <!-- Minimum color temperature, in Kelvin, supported by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureMin">5400</integer>
+
+    <!-- Duration, in milliseconds, of the display white balance animated transitions when decreasing cct. -->
+    <integer name="config_displayWhiteBalanceTransitionTimeDecrease">3000</integer>
+
+    <!-- Duration, in milliseconds, of the display white balance animated transitions when increasing cct. -->
+    <integer name="config_displayWhiteBalanceTransitionTimeIncrease">3000</integer>
+
+    <!-- Limit for the number of face templates per user -->
+    <integer name="config_faceMaxTemplatesPerUser">2</integer>
+
+    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">4130</integer>
+
+    <!-- Maximum color temperature, in Kelvin, supported by Night display. -->
+    <integer name="config_nightDisplayColorTemperatureMax">5000</integer>
+
+    <!-- Minimum color temperature, in Kelvin, supported by Night display. -->
+    <integer name="config_nightDisplayColorTemperatureMin">4000</integer>
+
+    <!-- Default strength, in percentage, of bright color reduction when activated. -->
+    <integer name="config_reduceBrightColorsStrengthDefault">25</integer>
+
+    <!-- Maximum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMax">60</integer>
+
+    <!-- Minimum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMin">25</integer>
+
+    <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+    <integer name="config_shutdownBatteryTemperature">600</integer>
+
+    <!-- Type of the tap sensor. Empty if tap is not supported. -->
+    <string translatable="false" name="config_dozeTapSensorType">com.google.sensor.single_touch</string>
+
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display. Optionally, you can append either `@left` or `@right` to the
+         end of the path string, in order to change the path origin to either the top left,
+         or top right of the display.
+
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+
+         If the display supports multiple resolutions, please define the path config based on the
+         highest resolution so that it can be scaled correctly in each resolution.
+
+         Example for a 10px x 10px square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
+         Example for a 10dp x 10dp square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
+
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M540,68.6m-21.5,0a21.5,21.5 0,1 1,43 0a21.5,21.5 0,1 1,-43 0 @left</string>
+
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M454.0, 0.0 h 86.0 v 126 h -86.0 Z @left</string>
+
+    <!-- A string config in svg path format for the main display shape.
+         (@see https://www.w3.org/TR/SVG/paths.html#PathData).
+
+         This config must be set unless:
+         1. {@link Configuration#isScreenRound} is true which means the display shape is circular
+            and the system will auto-generate a circular shape.
+         2. The display has no rounded corner and the system will auto-generate a rectangular shape.
+         (@see DisplayShape#createDefaultDisplayShape)
+
+         Note: If the display supports multiple resolutions, please define the path config based on
+         the highest resolution so that it can be scaled correctly in each resolution. -->
+    <string translatable="false" name="config_mainDisplayShape">M1080.1,2266.2l0,-2140.3l-0.1,-13.1l-0.2,-6.5l-0.6,-9.7l-0.8,-7.2l-1.1,-7.1l-2.2,-10l-3.1,-9.7l-4,-9.3l-4.9,-8.8l-4.9,-7l-5.5,-6.5l-6.1,-5.9l-6.7,-5.3l-7.2,-4.6l-7.3,-3.9l-7.7,-3.2l-8,-2.6l-6.1,-1.6l-6.2,-1.3l-7.1,-1.1l-7.2,-0.7l-9.6,-0.6l-6.5,-0.2l-13,-0.1l-828.3,0l-13,0.1l-6.5,0.2l-9.6,0.6l-7.2,0.7l-7.1,1.1l-6.2,1.3l-6.1,1.6l-8,2.6l-7.7,3.2l-7.3,3.9l-7.2,4.6l-6.7,5.3l-6.1,5.9l-5.5,6.5l-4.9,7l-4.9,8.8l-4,9.3l-3.1,9.7l-2.2,10l-1.1,7.1l-0.8,7.2l-0.6,9.7l-0.2,6.5l-0.1,13.1l0,2140.3l0.1,13.1l0.2,6.5l0.6,9.7l0.8,7.2l1.1,7.1l2.2,10l3.1,9.7l4,9.3l4.9,8.8l4.9,7l5.5,6.5l6.1,5.9l6.7,5.3l7.2,4.7l7.3,3.9l7.7,3.2l8,2.6l6.1,1.6l6.2,1.3l7.1,1.1l7.2,0.7l9.6,0.6l6.5,0.2l13,0.1l-13,-0.1l-6.5,-0.2l-9.6,-0.6l-7.2,-0.7l-7.1,-1.1l-6.2,-1.3l-6.1,-1.6l-8,-2.6l-7.7,-3.2l-7.3,-3.9l-7.2,-4.7l-6.7,-5.3l-6.1,-5.9l-5.5,-6.5l-4.9,-7l-4.9,-8.8l-4,-9.3l-3.1,-9.7l-2.2,-10l-1.1,-7.1l-0.8,-7.2l-0.6,-9.7l-0.2,-6.5l-0.1,-13.1l0,-2140.3l0.1,-13.1l0.2,-6.5l0.6,-9.7l0.8,-7.2l1.1,-7.1l2.2,-10l3.1,-9.7l4,-9.3l4.9,-8.8l4.9,-7l5.5,-6.5l6.1,-5.9l6.7,-5.3l7.2,-4.6l7.3,-3.9l7.7,-3.2l8,-2.6l6.1,-1.6l6.2,-1.3l7.1,-1.1l7.2,-0.7l9.6,-0.6l6.5,-0.2l13,-0.1l828.3,0l13,0.1l6.5,0.2l9.6,0.6l7.2,0.7l7.1,1.1l6.2,1.3l6.1,1.6l8,2.6l7.7,3.2l7.3,3.9l7.2,4.6l6.7,5.3l6.1,5.9l5.5,6.5l4.9,7l4.9,8.8l4,9.3l3.1,9.7l2.2,10l1.1,7.1l0.8,7.2l0.6,9.7l0.2,6.5l0.1,13.1l0,2140.3l-0.1,13.1l-0.2,6.5l-0.6,9.7l-0.8,7.2l-1.1,7.1l-2.2,10l-3.1,9.7l-4,9.3l-4.9,8.8l-4.9,7l-5.5,6.5l-6.1,5.9l-6.7,5.3l-7.2,4.7l-7.3,3.9l-7.7,3.2l-8,2.6l-6.1,1.6l-6.2,1.3l-7.1,1.1l-7.2,0.7l-9.6,0.6l-6.5,0.2l-13,0.1l-828.3,0l828.3,0l13,-0.1l6.5,-0.2l9.6,-0.6l7.2,-0.7l7.1,-1.1l6.2,-1.3l6.1,-1.6l8,-2.6l7.7,-3.2l7.3,-3.9l7.2,-4.7l6.7,-5.3l6.1,-5.9l5.5,-6.5l4.9,-7l4.9,-8.8l4,-9.3l3.1,-9.7l2.2,-10l1.1,-7.1l0.8,-7.2l0.6,-9.7l0.2,-6.5l0.1,-13.1z @left</string>
+</resources>

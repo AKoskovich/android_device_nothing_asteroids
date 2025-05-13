@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether to show Smooth Display feature in Settings Options -->
+    <bool name="config_show_smooth_display">true</bool>
+
+    <!-- The radius of the enrollment progress bar, in DP. -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">92</integer>
+</resources>

@@ -1,0 +1,80 @@
+#
+# SPDX-FileCopyrightText: 2025 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on fs
+    mkdir /mnt/vendor/persist/camera 0777 cameraserver cameraserver
+
+on post-fs-data
+    mkdir /data/vendor/camera 0775 camera camera
+    chmod 0444 /mnt/vendor/persist/camera/bokeh_caldata_uw_persist.bin
+    copy  /mnt/vendor/persist/camera/bokeh_caldata_uw_persist.bin /data/vendor/camera/bokeh_caldata_uw_persist.bin
+    chmod 0444 /data/vendor/camera/bokeh_caldata_uw_persist.bin
+    chown cameraserver audio /data/vendor/camera/bokeh_caldata_uw_persist.bin
+
+    chmod 0444 /mnt/vendor/persist/camera/bokeh_caldata_tele_persist.bin
+    copy /mnt/vendor/persist/camera/bokeh_caldata_tele_persist.bin /data/vendor/camera/bokeh_caldata_tele_persist.bin
+    chmod 0444 /data/vendor/camera/bokeh_caldata_tele_persist.bin
+    chown cameraserver audio /data/vendor/camera/bokeh_caldata_tele_persist.bin
+
+    chmod 0777 /vendor/etc/camera
+    copy /vendor/etc/camera/bokeh_caldata_uw_golden.bin /data/vendor/camera/bokeh_caldata_uw_golden.bin
+    chmod 0444 /data/vendor/camera/bokeh_caldata_uw_golden.bin
+    chown cameraserver audio /data/vendor/camera/bokeh_caldata_uw_golden.bin
+
+    copy /vendor/etc/camera/bokeh_caldata_tele_golden.bin /data/vendor/camera/bokeh_caldata_tele_golden.bin
+    chmod 0444 /data/vendor/camera/bokeh_caldata_tele_golden.bin
+    chown cameraserver audio /data/vendor/camera/bokeh_caldata_tele_golden.bin
+
+    symlink /mnt/vendor/persist/sensors/registry/registry/volcano_qrd_ois_manager_0.json.ois_manager_0_platform.ois.fac_cal.bias /data/vendor/camera/ois_gyro_offset
+    chown cameraserver audio /data/vendor/camera/ois_gyro_offset
+
+on early-boot
+    chmod 660 /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/dev_color
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/dev_color
+
+    chmod 660 /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/operating_mode
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/operating_mode
+    chmod 660 /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/frame_brightness
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/frame_brightness
+
+on boot
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/factory_test
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/imax
+    chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/effect
+    chown system system /sys/class/leds/aw20036_led/hwid
+    chmod 664 /sys/class/leds/aw20036_led/hwid
+    chown system system /sys/class/leds/aw20036_led/effect
+    chmod 664 /sys/class/leds/aw20036_led/effect
+    chown system system /sys/class/leds/aw20036_led/all_brightness
+    chmod 220 /sys/class/leds/aw20036_led/all_brightness
+    chown system system /sys/class/leds/aw20036_led/imax
+    chmod 664 /sys/class/leds/aw20036_led/imax
+    chown system system /sys/class/leds/aw20036_led/frame_brightness
+    chmod 220 /sys/class/leds/aw20036_led/frame_brightness
+    chown system system /sys/class/leds/aw20036_led/operating_mode
+    chmod 664 /sys/class/leds/aw20036_led/operating_mode
+    chown system system /sys/class/leds/aw20036_led/all_white_brightness
+    chmod 220 /sys/class/leds/aw20036_led/all_white_brightness
+    chown system system /sys/class/leds/aw20036_led/factory_test
+    chmod 664 /sys/class/leds/aw20036_led/factory_test
+    chown system system /sys/class/leds/aw20036_led/single_brightness
+    chown system system /sys/class/leds/aw20036_led/vip_notification
+    chown system system /sys/class/leds/aw20036_led/dev_color
+    chown system system /mnt/vendor/persist/color
+    chmod 444 /mnt/vendor/persist/color
+
+    mkdir data/vendor/fpdump 0777 system system
+    restorecon /data/vendor/fpdump
+
+on property:sys.boot_completed=1
+    swapon_all /odm/etc/fstab.zram.2g
+
+    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/system-background/cpus 0-5
+
+on property:vendor.all.modules.ready=1
+    chown system system /proc/touchpanel/fod_mode
+    chown system system /proc/touchpanel/gesture_mode
+    chown system system /sys/panel_feature/fp_status
