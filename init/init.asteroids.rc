@@ -30,6 +30,8 @@ on post-fs-data
     symlink /mnt/vendor/persist/sensors/registry/registry/volcano_qrd_ois_manager_0.json.ois_manager_0_platform.ois.fac_cal.bias /data/vendor/camera/ois_gyro_offset
     chown cameraserver audio /data/vendor/camera/ois_gyro_offset
 
+    setprop ro.media.xml_variant.profiles "_volcano_v1_${ro.boot.pbid}"
+
 on early-boot
     chmod 660 /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/dev_color
     chown system system /sys/devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-003a/leds/aw20036_led/dev_color

@@ -1108,8 +1108,8 @@ vendor/etc/media_codecs_performance_volcano_v1.xml
 vendor/etc/media_codecs_volcano_v0.xml
 vendor/etc/media_codecs_volcano_v1.xml
 vendor/etc/media_profiles.xml
-vendor/etc/media_profiles_volcano_v0.xml
-vendor/etc/media_profiles_volcano_v1.xml
+vendor/etc/media_profiles_volcano_v1_Base.xml
+vendor/etc/media_profiles_volcano_v1_Pro.xml
 vendor/etc/media_volcano_v0/video_system_specs.json
 vendor/etc/media_volcano_v1/video_system_specs.json
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
