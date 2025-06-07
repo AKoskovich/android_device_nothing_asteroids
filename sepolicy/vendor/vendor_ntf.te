@@ -1,0 +1,9 @@
+type vendor_ntf, domain;
+type vendor_ntf_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_ntf)
+
+type_transition vendor_ntf device:file vendor_ntf_file;
+
+allow vendor_ntf device:dir w_dir_perms;
+allow vendor_ntf vendor_ntf_file:file create_file_perms;

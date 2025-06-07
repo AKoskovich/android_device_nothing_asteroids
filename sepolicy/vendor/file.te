@@ -4,5 +4,8 @@ type vendor_proc_graphics, fs_type, proc_type;
 # Fingerprint
 type vendor_proc_fingerprint, fs_type, proc_type;
 
+# NTF
+type vendor_ntf_file, file_type;
+
 # ZRAM
 type per_boot_file, file_type, data_file_type, core_data_file_type;
