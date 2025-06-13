@@ -557,11 +557,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.oem_unlock_supported=1
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    AsteroidsApertureDevOverlay \
-    AsteroidsApertureOverlay \
     AsteroidsFrameworksOverlay \
     AsteroidsMainlineWifiOverlay \
     AsteroidsProMainlineWifiOverlay \
