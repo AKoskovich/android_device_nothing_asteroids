@@ -18,8 +18,8 @@ PRODUCT_NAME := lineage_asteroids
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 15 AQ3A.241015.001 2504171222 release-keys" \
-    BuildFingerprint=Nothing/Asteroids/Asteroids:15/AQ3A.241015.001/2504171222:user/release-keys \
+    BuildDesc="qssi_64-user 15 AQ3A.241015.001 2505291004 release-keys" \
+    BuildFingerprint=Nothing/Asteroids/Asteroids:15/AQ3A.241015.001/2505291004:user/release-keys \
     DeviceName=Asteroids \
     DeviceProduct=Asteroids \
     SystemDevice=Asteroids \
