@@ -66,6 +66,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt': blob_fixup()
         .patch_file('audio/lvacfs_2mic_config.patch'),
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
+        .regex_replace('STNFC_FW_DEBUG_ENABLED=1', 'STNFC_FW_DEBUG_ENABLED=0')
         .regex_replace('vendor/firmware', 'vendor/firmware/nfc'),
     'vendor/lib64/libarcsoft_dark_vision_raw.so': blob_fixup()
         .clear_symbol_version('remote_register_buf')
