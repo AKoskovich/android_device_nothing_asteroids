@@ -680,8 +680,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    kernel/nothing/sm7635 \
-    kernel/nothing/sm7635-modules
+    kernel/nothing/sm8650 \
+    kernel/nothing/sm8650-modules
 
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
