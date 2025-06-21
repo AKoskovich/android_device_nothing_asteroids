@@ -28,6 +28,10 @@
 /dev/ntfeature             u:object_r:vendor_ntf_file:s0
 /vendor/bin/ntf-service    u:object_r:vendor_ntf_exec:s0
 
+# Secure Element
+/dev/st54spi                                                        u:object_r:secure_element_device:s0
+/vendor/bin/hw/android\.hardware\.secure_element-service\.thales    u:object_r:hal_secure_element_default_exec:s0
+
 # Sensors
 /vendor/bin/hw/vendor\.noth\.hardware\.sensor\.sensor_extension-service    u:object_r:hal_sensors_default_exec:s0
 
