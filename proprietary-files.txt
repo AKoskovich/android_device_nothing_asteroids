@@ -900,6 +900,10 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 vendor/lib64/vendor.hardware.light-V1-ndk_platform.so
 
+# eUICC
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+system/app/GoogleEuiccPartner/GoogleEuiccPartner.apk
+
 # GPS
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
