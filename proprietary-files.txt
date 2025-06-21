@@ -1162,7 +1162,7 @@ vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf_base.txt:odm/overlayfs_origin/base/firmware/nfc/st21nfc_conf.bin
 vendor/etc/st21nfc_conf_pro.txt:odm/overlayfs_origin/pro/firmware/nfc/st21nfc_conf.bin
-vendor/firmware/st21nfc_fw.bin:vendor/firmware/nfc/st21nfc_fw.bin
+vendor/firmware/st21nfc_fw7.bin:vendor/firmware/nfc/st21nfc_fw.bin
 
 # NTF
 vendor/bin/ntf-service
