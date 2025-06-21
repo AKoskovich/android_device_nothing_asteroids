@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exceptions>
+  <exception
+    package="com.google.android.euicc"
+    sha256-cert-digest="7E:26:B6:D5:80:2A:16:79:94:48:AD:63:58:68:F0:34:5D:67:30:31:06:34:68:4C:0A:E4:4E:7E:9F:7E:A7:64">
+    <!-- Notifications -->
+    <permission name="android.permission.POST_NOTIFICATIONS" fixed="false" />
+  </exception>
+</exceptions>

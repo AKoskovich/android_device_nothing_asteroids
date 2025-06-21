@@ -413,7 +413,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_ProTUR/android.hardware.telephony.euicc.xml
 
 PRODUCT_PACKAGES += \
-    AsteroidsEuicc
+    AsteroidsEuicc \
+    default-permissions-com.google.android.euicc.xml
 
 PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
