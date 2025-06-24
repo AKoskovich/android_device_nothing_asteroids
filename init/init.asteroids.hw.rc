@@ -6,19 +6,20 @@
 on early-init
     setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
 
-on late-fs && property:ro.boot.pbid=Base
+on fs && property:ro.boot.pbid=Base
     mount overlay overlay /vendor/etc/camera lowerdir=/vendor/etc/camera:/odm/overlayfs_origin/base/etc/camera,context=u:object_r:vendor_configs_file:s0
-    mount overlay overlay /vendor/firmware/nfc lowerdir=/vendor/firmware/nfc:/odm/overlayfs_origin/base/firmware/nfc,context=u:object_r:vendor_configs_file:s0
 
+    setprop persist.vendor.nfc.config_file_name "libnfc-hal-st-BASE.conf"
     setprop vendor.usb.product_string "Nothing Phone (3a)"
 
-on late-fs && property:ro.boot.pbid=Pro
+on fs && property:ro.boot.pbid=Pro
     mount overlay overlay /vendor/etc/camera lowerdir=/vendor/etc/camera:/odm/overlayfs_origin/pro/etc/camera,context=u:object_r:vendor_configs_file:s0
-    mount overlay overlay /vendor/firmware/nfc lowerdir=/vendor/firmware/nfc:/odm/overlayfs_origin/pro/firmware/nfc,context=u:object_r:vendor_configs_file:s0
 
+    setprop persist.vendor.nfc.config_file_name "libnfc-hal-st-PRO.conf"
     setprop vendor.usb.product_string "Nothing Phone (3a) Pro"
 
-on property:ro.boot.hardware.sku=JPN
+on late-fs && property:ro.boot.hardware.sku=JPN
+    setprop persist.vendor.nfc.config_file_name "libnfc-hal-st-JPN.conf"
     start gto_secure_element_aidl_service
 
 service gto_secure_element_aidl_service /vendor/bin/hw/android.hardware.secure_element-service.thales

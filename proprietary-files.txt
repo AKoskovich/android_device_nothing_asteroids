@@ -1158,11 +1158,11 @@ vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 
 # NFC
-vendor/etc/libnfc-hal-st.conf
-vendor/etc/libnfc-nci.conf
-vendor/etc/st21nfc_conf_base.txt:odm/overlayfs_origin/base/firmware/nfc/st21nfc_conf.bin
-vendor/etc/st21nfc_conf_pro.txt:odm/overlayfs_origin/pro/firmware/nfc/st21nfc_conf.bin
-vendor/firmware/st21nfc_fw7.bin:vendor/firmware/nfc/st21nfc_fw.bin
+vendor/etc/st21nfc_conf_base.txt
+vendor/etc/st21nfc_conf_pro.txt
+vendor/etc/st54j_conf_felica.txt
+vendor/firmware/st21nfc_fw7.bin
+vendor/firmware/st54j_fw_felica.bin
 
 # NTF
 vendor/bin/ntf-service
