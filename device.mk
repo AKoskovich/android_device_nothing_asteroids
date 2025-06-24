@@ -128,9 +128,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.af.client_heap_size_kbyte=7168 \
     ro.audio.monitorRotation=true
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.audio.ihaladaptervendorextension_enabled=true
-
 PRODUCT_VENDOR_PROPERTIES += \
     aaudio.hw_burst_min_usec=2000 \
     aaudio.mmap_exclusive_policy=2 \
