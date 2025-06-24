@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "AsteroidsApertureDevOverlay",
+    manifest: "AndroidDevManifest.xml",
+    device_specific: true,
+}
+
+runtime_resource_overlay {
+    name: "AsteroidsApertureOverlay",
+    manifest: "AndroidManifest.xml",
+    device_specific: true,
+}
