@@ -215,17 +215,17 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/framework_matrix_nothing.xml \
+    $(DEVICE_PATH)/vintf/framework_matrix_nothing.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/vintf/framework_manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
-ODM_MANIFEST_FILES += $(DEVICE_PATH)/manifest_asteroids.xml
+ODM_MANIFEST_FILES += $(DEVICE_PATH)/vintf/manifest_asteroids.xml
 ODM_MANIFEST_SKUS := JPN
-ODM_MANIFEST_JPN_FILES := $(DEVICE_PATH)/manifest_JPN.xml
+ODM_MANIFEST_JPN_FILES := $(DEVICE_PATH)/vintf/manifest_JPN.xml
 
 DEVICE_MANIFEST_SKUS += volcano
-DEVICE_MANIFEST_VOLCANO_FILES += $(DEVICE_PATH)/manifest_volcano.xml
+DEVICE_MANIFEST_VOLCANO_FILES += $(DEVICE_PATH)/vintf/manifest_volcano.xml
 
 # Wi-Fi
 BOARD_WLAN_DEVICE := qcwcn
