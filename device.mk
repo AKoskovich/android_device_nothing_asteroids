@@ -483,17 +483,18 @@ PRODUCT_PACKAGES += \
     AsteroidsSettingsProviderOverlay \
     AsteroidsSystemUIOverlay \
     AsteroidsWifiOverlay \
-    CarrierConfigResCommon_Sys \
-    FrameworksResCommon_Sys \
+    CarrierConfigResCommon_Vendor \
+    FrameworksResCommon_Vendor \
     FrameworksResTarget_Vendor \
     NcmTetheringOverlay \
     SecureElementResTarget_Vendor \
-    SettingsResCommon_Sys \
-    SystemUIResCommon_Sys \
+    SettingsResCommon_Vendor \
+    SystemUIResCommon_Vendor \
     TelephonyResCommon_Sys \
-    UwbResCommon_Sys \
-    WifiResCommonMainline_Sys \
-    WifiResCommon_Sys \
+    TelephonyResCommon_Vendor \
+    UwbResCommon_Vendor \
+    WifiResCommonMainline_Vendor \
+    WifiResCommon_Vendor \
     WifiResMainlineTarget \
     WifiResTarget
 
