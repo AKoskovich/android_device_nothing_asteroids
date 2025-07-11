@@ -4,13 +4,13 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiResCommonMainline_Sys",
+    name: "WifiResCommonMainline_Vendor",
     manifest: "MainlineAndroidManifest.xml",
-    product_specific: true,
+    vendor: true,
 }
 
 runtime_resource_overlay {
-    name: "WifiResCommon_Sys",
+    name: "WifiResCommon_Vendor",
     manifest: "AndroidManifest.xml",
-    product_specific: true,
+    vendor: true,
 }

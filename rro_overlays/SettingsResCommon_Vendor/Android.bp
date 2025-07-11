@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIResCommon_Sys",
-    product_specific: true,
+    name: "SettingsResCommon_Vendor",
+    vendor: true,
 }
