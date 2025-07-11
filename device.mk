@@ -625,12 +625,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=33,33 \
-    ro.telephony.sim_slots.count=2 \
-    telephony.active_modems.max_count=2 \
     telephony.lteOnCdmaDevice=1
 
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.rcs.singlereg.feature=1
+    persist.vendor.rcs.singlereg.feature=1 \
+    ro.telephony.sim_slots.count=2 \
+    telephony.active_modems.max_count=2
 
 # Thermal
 PRODUCT_PACKAGES += \
