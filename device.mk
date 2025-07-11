@@ -629,7 +629,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.rcs.singlereg.feature=1 \
-    ro.telephony.sim_slots.count=2 \
     telephony.active_modems.max_count=2
 
 # Thermal
