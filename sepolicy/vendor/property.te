@@ -1,8 +1,5 @@
 # Fingerprint
 vendor_internal_prop(vendor_fingerprint_prop)
 
-# NFC
-vendor_internal_prop(vendor_nfc_prop)
-
 # Secure Element
 vendor_internal_prop(vendor_secure_element_prop)
