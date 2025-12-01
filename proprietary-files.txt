@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from the B4.0-251021-1539 release for the Nothing Phone (3a).
+## are from the B4.0-251118-1551 release for the Nothing Phone (3a).
 
 # ADSPRPC
 vendor/bin/adsprpcd
