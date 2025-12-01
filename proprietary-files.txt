@@ -1759,14 +1759,14 @@ vendor/bin/trusteduilistener
 vendor/etc/init/trusteduilistener.rc
 vendor/lib64/libTrustedInputUtils.so
 
-# Verizon - from komodo BP2A.250805.005
+# Verizon - from mustang BP4A.251205.006
 product/app/VZWAPNLib/VZWAPNLib.apk;PRESIGNED|b46894f553b9bdcd4fd6b6832b4839b92b96870e
 product/etc/permissions/com.verizon.apn.xml|21a14491eed042abeecc4c3da6235845d2907c46
 product/etc/permissions/com.verizon.services.xml|8fcd95a9f2bd4871ef30b2e00f45e8f4c1886ee3
 product/etc/permissions/features-verizon.xml|5f3fabe1019abc61531727b5fa51ee8dbbe22e63
 product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED|4c6d03dffc55ec56c97177e315aafa9959780d73
-product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED|31c59b9dfae392099e547dbccd5a608905831c68
-system_ext/etc/permissions/vzw_mvs_permissions.xml|c35a5ccd38e42291a9546ac6e778881e8223834e
+product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED|66e7fdc0a36052f0fd875de07cd1a2d7f3beb65b
+system_ext/etc/permissions/vzw_mvs_permissions.xml|1f6f9e928992168231ec8aa090ed6020357ae4ad
 system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED|0f11acd4e795fcd126c8eaf57de0a4bf90074577
 
 # Vibrator
