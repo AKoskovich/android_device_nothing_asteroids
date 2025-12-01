@@ -1765,8 +1765,8 @@ product/etc/permissions/com.verizon.apn.xml|21a14491eed042abeecc4c3da6235845d290
 product/etc/permissions/com.verizon.services.xml|8fcd95a9f2bd4871ef30b2e00f45e8f4c1886ee3
 product/etc/permissions/features-verizon.xml|5f3fabe1019abc61531727b5fa51ee8dbbe22e63
 product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED|4c6d03dffc55ec56c97177e315aafa9959780d73
-product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED|31c59b9dfae392099e547dbccd5a608905831c68
-system_ext/etc/permissions/vzw_mvs_permissions.xml|c35a5ccd38e42291a9546ac6e778881e8223834e
+product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED|d837526351c3c0a187e2fe3de176bb62190caa72
+system_ext/etc/permissions/vzw_mvs_permissions.xml|1f6f9e928992168231ec8aa090ed6020357ae4ad
 system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED|0f11acd4e795fcd126c8eaf57de0a4bf90074577
 
 # Vibrator
