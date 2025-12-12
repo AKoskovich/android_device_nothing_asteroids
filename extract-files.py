@@ -58,6 +58,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_register_buf')
         .clear_symbol_version('rpcmem_alloc')
         .clear_symbol_version('rpcmem_free'),
+    (
+        'vendor/lib64/libcapiv2uvvendor.so',
+        'vendor/lib64/liblistensoundmodel2vendor.so',
+        'vendor/lib64/libVoiceSdk.so',
+    ): blob_fixup().replace_needed(
+        'libtensorflowlite_c.so',
+        'libtensorflowlite_c_vendor.so',
+    ),
     'vendor/lib64/libcne.so': blob_fixup()
         .add_needed('libbinder_shim.so'),
     'vendor/lib64/libmorpho_RapidEffect.so': blob_fixup()
