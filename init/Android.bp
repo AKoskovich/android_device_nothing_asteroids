@@ -38,6 +38,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.insmod.pas.cfg",
+    src: "init.insmod.pas.cfg",
+    recovery: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
     sub_dir: "init/hw",
@@ -99,6 +105,13 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "insmod.sh",
+    src: "insmod.sh",
+    recovery_available: true,
     vendor: true,
 }
 

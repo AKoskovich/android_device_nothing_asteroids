@@ -389,12 +389,14 @@ PRODUCT_PACKAGES += \
     init.asteroids.nfc.sh \
     init.asteroids.rc \
     init.class_main.sh \
+    init.insmod.pas.cfg \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
     init.qcom.sh \
     init.target.rc \
+    insmod.sh.recovery \
     system_dlkm_modprobe.sh \
     ueventd.asteroids.rc \
     ueventd.qcom.rc
