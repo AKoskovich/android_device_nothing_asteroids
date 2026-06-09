@@ -1346,7 +1346,6 @@ vendor/lib64/libpowercore.so
 vendor/lib64/libprefapps.so
 vendor/lib64/libprekill.so
 vendor/lib64/libprocomp.so
-vendor/lib64/libprotobuf-cpp-lite-21.7.so
 vendor/lib64/libq-perflog.so
 vendor/lib64/libqapesdk.so
 vendor/lib64/libqti-iopd-client.so
@@ -1508,7 +1507,6 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_server.xml
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/libQtiRilLoadable.so
 vendor/lib64/libSensorsInterface.so
-vendor/lib64/libprotobuf-cpp-full-21.7.so
 vendor/lib64/libqcrilDataModule.so
 vendor/lib64/libqcrilNr.so
 vendor/lib64/libqcrilNrCellInfoModule.so
