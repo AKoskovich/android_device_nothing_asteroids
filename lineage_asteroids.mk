@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: 2025 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -18,8 +18,8 @@ PRODUCT_NAME := lineage_asteroids
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 16 BQ2A.250721.001-BP2A.250605.031.A3 2511181551 release-keys" \
-    BuildFingerprint=Nothing/Asteroids/Asteroids:16/BQ2A.250721.001-BP2A.250605.031.A3/2511181551:user/release-keys \
+    BuildDesc="qssi_64-user 16 BQ2A.250721.001-BP2A.250605.031.A3 2604141749 release-keys" \
+    BuildFingerprint=Nothing/Asteroids/Asteroids:16/BQ2A.250721.001-BP2A.250605.031.A3/2604141749:user/release-keys \
     DeviceName=Asteroids \
     DeviceProduct=Asteroids \
     SystemDevice=Asteroids \

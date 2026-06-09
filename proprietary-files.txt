@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from the B4.0-251118-1551 release for the Nothing Phone (3a).
+## are from the B4.1-260414-1749 release for the Nothing Phone (3a).
 
 # ADSPRPC
 vendor/bin/adsprpcd
@@ -347,7 +347,6 @@ system_ext/etc/permissions/advancedSample_camera_extensions.xml
 system_ext/framework/androidx.camera.extensions.impl.advanced.jar;MAKE_COPY_RULE_ONLY
 system_ext/lib64/libencoderjpeg_jni.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
-vendor/etc/camera/Ndot-55.otf
 vendor/etc/camera/ancsat/sat_mecp.bin
 vendor/etc/camera/ancsat/sat_mecp_plus.bin
 vendor/etc/camera/basic_param.bin
