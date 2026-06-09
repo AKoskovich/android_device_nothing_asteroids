@@ -1,1 +1,2 @@
 set_prop(vendor_qti_init_shell, vendor_nfc_prop)
+set_prop(vendor_qti_init_shell, vendor_persist_nfc_prop)
