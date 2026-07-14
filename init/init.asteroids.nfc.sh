@@ -3,6 +3,13 @@
 pbid=$(getprop ro.boot.pbid)
 sku=$(getprop ro.boot.hardware.sku)
 
+# NFC chip driver may probe after vendor.all.modules.ready fires; wait for sysfs node
+i=0
+while [ ! -f /sys/bus/i2c/devices/1-0008/hw_version ] && [ $i -lt 20 ]; do
+    sleep 0.5
+    i=$((i + 1))
+done
+
 if [ -f /sys/bus/i2c/devices/1-0008/hw_version ]; then
     hwid=$(cat /sys/bus/i2c/devices/1-0008/hw_version)
 
